@@ -13,7 +13,7 @@ namespace Distance.Tests
     {
         [Fact]
         ///<summary>
-        ///
+        ///Calculated the distance between two numbers Function Test
         /// </summary>
 
         void Distance_Test()
@@ -27,7 +27,23 @@ namespace Distance.Tests
             
             //assert
             ergebnis.Should().Be(5);
-            Assert.Equal(5, ergebnis);
+        }
+        [Fact]
+        ///<summary>
+        ///Calculated the distance between two numbers Function Test
+        /// </summary>
+
+        void Distance_Test_Negative()
+        {
+            //Arrange
+            int zahl1 = -10;
+            int zahl2 = 5;
+
+            //Act
+            int ergebnis = Distance.distance(zahl1, zahl2);
+
+            //assert
+            ergebnis.Should().Be(15);
         }
     }
 }
